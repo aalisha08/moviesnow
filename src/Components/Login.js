@@ -190,8 +190,8 @@ function Login({ onClose, switchToSignup, onLoginSuccess }) {
       const response = await axios.post('http://localhost:9001/tuntun/login', { email, epass });
 
       if (response.status === 200) {
-        const userData = response.data; // User data including ID
-        localStorage.setItem('userId', userData.id); // Store user ID in local storage or context
+        const userData = response.data; 
+        localStorage.setItem('userId', userData.id); 
         onLoginSuccess(userData);
         alert('Login successful!');
         onClose();
